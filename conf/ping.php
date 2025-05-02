@@ -1,6 +1,6 @@
 <?php 
 
-require 'conf/config.php';
+require 'config.php';
 
 if ($conn->ping()) {
   echo "Koneksi ke database berhasil!";
