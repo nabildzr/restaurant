@@ -3,12 +3,12 @@
 $title = 'Tables';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['add'])) {
@@ -176,4 +176,4 @@ $tableID = getNextAvailableTableID();
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

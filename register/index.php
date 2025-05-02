@@ -1,6 +1,6 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/register/reg-check.php';
+include_once __DIR__ . '/partials/layouts/layout-top.php';
+require_once __DIR__ .  '/register/reg-check.php';
 
 if (isset($_SESSION['isLogin']) == true) {
 ?>
@@ -12,9 +12,9 @@ if (isset($_SESSION['isLogin']) == true) {
 
 if (isset($_POST['signup'])) {
     if (register($_POST) > 0) {
-        echo "<script>window.location.href = '/restaurant/login/?reg=1'</script>";
+        echo "<script>window.location.href = '/login/?reg=1'</script>";
     } else {
-        echo "<script>window.location.href = '/restaurant/register/?reg=-1'</script>";
+        echo "<script>window.location.href = '/register/?reg=-1'</script>";
     }
 }
 
@@ -52,7 +52,7 @@ if (isset($_POST['signup'])) {
 
                 <div class="form-group">
                     <label class="" style="color: white;">Already Have an account? <a
-                            href="/restaurant/login/">Login</a></label>
+                            href="/login/">Login</a></label>
                 </div>
 
                 <div class="form-group terms">
@@ -115,4 +115,4 @@ if (isset($_POST['signup'])) {
 // echo $script;
 ?>
 <!-- footer -->
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php' ?>
+<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php' ?>

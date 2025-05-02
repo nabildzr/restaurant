@@ -21,25 +21,25 @@ Aplikasi ini dibuat untuk memudahkan pengguna dalam mengelola restoran, seperti 
 1. Clone repository ini
 2. Jalankan laragon/xampp (apache & mysql)
 3. Collision database harus utf8mb4_general_ci
-4. domain address harus http://localhost/restaurant/ (karena pada pembuatan ini ada yang menggunakan xampp yang dimana domain addressnya http://localhost/ dan pada laragon bisa saja custom domain address seperti restaurant.test jadi jika ingin menggunakan custom domain address maka tinggal ubah-ubah saja import path nya)
+4. domain address harus http://localhost/ (karena pada pembuatan ini ada yang menggunakan xampp yang dimana domain addressnya http://localhost/ dan pada laragon bisa saja custom domain address seperti restaurant.test jadi jika ingin menggunakan custom domain address maka tinggal ubah-ubah saja import path nya)
 5. Jalankan.
 
 ## Username dan Password
+
 - Admin
-    1. id : 11, password: 12345
 
+  1. id : 11, password: 12345
 - Client
-    1. email: tarzan@gmail.com, password: 12345
-    2. email: giga@gmail.com, password: 12345
 
+  1. email: tarzan@gmail.com, password: 12345
+  2. email: giga@gmail.com, password: 12345
 
 ## Halaman Login
 
 - Admin
-    /restaurant/admin/login.php atau /restaurant/admin/ saja jika belum login
-
+  /admin/login.php atau /admin/ saja jika belum login
 - Client
-    /restaurant/login/ atau klik saja button "Login" yang ada pada navbar maupun sidebar versi android
+  /login/ atau klik saja button "Login" yang ada pada navbar maupun sidebar versi android
 
 ## Konfigurasi
 

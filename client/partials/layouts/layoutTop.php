@@ -1,10 +1,10 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/client/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/connection.php';
+include_once __DIR__ .  '/client/conf/function.php';
+require_once __DIR__ .  '/conf/connection.php';
 if (!isset($_SESSION['isLogin'])) {
 ?>
- <script>
-        window.location.href = "../index.php"   
+    <script>
+        window.location.href = "../index.php"
     </script>
 <?php
 }
@@ -25,15 +25,15 @@ $userData = mysqli_fetch_assoc($user);
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/client/partials/head.php' ?>
+<?php include_once __DIR__ . '/client/partials/head.php' ?>
 
 <body>
 
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/client/partials/sidebar.php' ?>
+    <?php include_once __DIR__ . '/client/partials/sidebar.php' ?>
 
     <main class="dashboard-main">
-        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/client/partials/navbar.php' ?>
+        <?php include_once __DIR__ . '/client/partials/navbar.php' ?>
 
         <div class="dashboard-main-body">
 
-            <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/client/partials/breadcrumb.php' ?>
+            <?php include_once __DIR__ . '/client/partials/breadcrumb.php' ?>

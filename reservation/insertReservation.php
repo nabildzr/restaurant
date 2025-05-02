@@ -1,7 +1,7 @@
 <?php
 // reservation.php
 // digunakan untuk menghandle form reservation
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/function.php';
+require_once __DIR__ .  '/conf/function.php';
 
 session_start();
 

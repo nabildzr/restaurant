@@ -29,11 +29,11 @@ $subTitle = 'Purchase History';
         </div>
         <div class="d-flex flex-wrap align-items-center gap-3">
             <select class="form-select form-select-sm w-auto">
-                <option value=""hidden>Status</option>
+                <option value="" hidden>Status</option>
                 <option value="">Waiting</option>
                 <option value="">Success</option>
                 <option value="">Failed</option>
-                
+
             </select>
             <a href="invoice-add.php" class="btn btn-sm btn-primary-600"><i class="ri-add-line"></i> Create Invoice</a>
         </div>
@@ -58,46 +58,46 @@ $subTitle = 'Purchase History';
                     WHERE c.member_id = $memberID ORDER BY c.added_at DESC");
                 foreach ($carts as $cart) :
                 ?>
-                <tr>
-                    <td class="text-center"><?= $cart['cart_id'] ?></td>
-                    
-                    <td class="text-center">
-                        <div class="d-flex align-items-center">
-                            <img src="/restaurant/admin/images/<?= $cart['item_image'] ?>" alt="" class="flex-shrink-0 me-12 radius-8" width="50" height="50">
-                            <h6 class="text-md mb-0 fw-medium flex-grow-1"><?= $cart['item_name'] ?></h6>
-                        </div>
-                    </td>
-                    <td class="text-center"><?= $cart['added_at'] ?></td>
-                    <td class="text-center"><?= 'Rp. ' . number_format($cart['quantity'] * $cart['item_price'], 0, ',', '.') ?></td>
-                    <td class="text-center">
-                        <?php
-                        switch ($cart['status']) {
-                            case 'success':
-                                echo '<span class="bg-success-focus text-success-main px-24 py-4 rounded-pill fw-medium text-sm">Success</span>';
-                                break;
-                            case 'failed':
-                                echo '<span class="bg-danger-focus text-danger-main px-24 py-4 rounded-pill fw-medium text-sm">Failed</span>';
-                                break;
-                            case 'waiting':
-                                echo '<span class="bg-warning-focus text-warning-main px-24 py-4 rounded-pill fw-medium text-sm">Waiting</span>';
-                                break;
-                            default:
-                                echo '<span class="bg-gray-200 text-gray-600 px-24 py-4 rounded-pill fw-medium text-sm">-</span>';
-                        }
-                        ?>
-                    </td>
-                    <td class="text-center">
-                        <a href="javascript:void(0)" class="w-32-px h-32-px bg-primary-light text-primary-600 rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <iconify-icon icon="iconamoon:eye-light"></iconify-icon>
-                        </a>
-                        <a href="javascript:void(0)" class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <iconify-icon icon="lucide:edit"></iconify-icon>
-                        </a>
-                        <a href="javascript:void(0)" class="w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center">
-                            <iconify-icon icon="mingcute:delete-2-line"></iconify-icon>
-                        </a>
-                    </td>
-                </tr>
+                    <tr>
+                        <td class="text-center"><?= $cart['cart_id'] ?></td>
+
+                        <td class="text-center">
+                            <div class="d-flex align-items-center">
+                                <img src="/admin/images/<?= $cart['item_image'] ?>" alt="" class="flex-shrink-0 me-12 radius-8" width="50" height="50">
+                                <h6 class="text-md mb-0 fw-medium flex-grow-1"><?= $cart['item_name'] ?></h6>
+                            </div>
+                        </td>
+                        <td class="text-center"><?= $cart['added_at'] ?></td>
+                        <td class="text-center"><?= 'Rp. ' . number_format($cart['quantity'] * $cart['item_price'], 0, ',', '.') ?></td>
+                        <td class="text-center">
+                            <?php
+                            switch ($cart['status']) {
+                                case 'success':
+                                    echo '<span class="bg-success-focus text-success-main px-24 py-4 rounded-pill fw-medium text-sm">Success</span>';
+                                    break;
+                                case 'failed':
+                                    echo '<span class="bg-danger-focus text-danger-main px-24 py-4 rounded-pill fw-medium text-sm">Failed</span>';
+                                    break;
+                                case 'waiting':
+                                    echo '<span class="bg-warning-focus text-warning-main px-24 py-4 rounded-pill fw-medium text-sm">Waiting</span>';
+                                    break;
+                                default:
+                                    echo '<span class="bg-gray-200 text-gray-600 px-24 py-4 rounded-pill fw-medium text-sm">-</span>';
+                            }
+                            ?>
+                        </td>
+                        <td class="text-center">
+                            <a href="javascript:void(0)" class="w-32-px h-32-px bg-primary-light text-primary-600 rounded-circle d-inline-flex align-items-center justify-content-center">
+                                <iconify-icon icon="iconamoon:eye-light"></iconify-icon>
+                            </a>
+                            <a href="javascript:void(0)" class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center">
+                                <iconify-icon icon="lucide:edit"></iconify-icon>
+                            </a>
+                            <a href="javascript:void(0)" class="w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center">
+                                <iconify-icon icon="mingcute:delete-2-line"></iconify-icon>
+                            </a>
+                        </td>
+                    </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

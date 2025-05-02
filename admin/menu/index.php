@@ -3,23 +3,23 @@
 $title = 'Menu';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['addMenu'])) {
     if (addMenu($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/menu/?alert=2";
+            window.location.href = "/admin/menu/?alert=2";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/menu/?alert=12";
+            window.location.href = "/admin/menu/?alert=12";
         </script>
 <?php
     }
@@ -113,15 +113,15 @@ if (isset($_POST['addMenu'])) {
                         </td>
                         <td class="text-center">
 
-                              <!-- if discount_status == 1 then show "Yes", else show "No" -->
-                              <?= $menu['discount_status'] ? '<span class="bg-success-focus text-success-main px-32 py-4 rounded-pill fw-medium text-sm">Active</span>' : '<span class="bg-danger-focus text-danger-main px-32 py-4 rounded-pill fw-medium text-sm">Inactive</span>'  ?>
+                            <!-- if discount_status == 1 then show "Yes", else show "No" -->
+                            <?= $menu['discount_status'] ? '<span class="bg-success-focus text-success-main px-32 py-4 rounded-pill fw-medium text-sm">Active</span>' : '<span class="bg-danger-focus text-danger-main px-32 py-4 rounded-pill fw-medium text-sm">Inactive</span>'  ?>
 
                         </td>
                         <td class="text-center">
-                              <?= $menu['discount'] ?>
+                            <?= $menu['discount'] ?>
 
                         </td>
-              
+
 
 
 
@@ -285,4 +285,4 @@ if (isset($_POST['addMenu'])) {
                 
                 '; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

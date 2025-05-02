@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/function.php';
 
 if(isset($_GET['table_id'])) {
     $tableID = $_GET['table_id'];

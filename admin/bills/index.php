@@ -3,23 +3,23 @@
 $title = 'Bills';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['addMenu'])) {
     if (addMenu($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/menu/?alert=10";
+            window.location.href = "/admin/menu/?alert=10";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/menu/?alert=11";
+            window.location.href = "/admin/menu/?alert=11";
         </script>
 <?php
     }
@@ -116,16 +116,16 @@ if (isset($_POST['addMenu'])) {
                         </div>
                         <div class="col-12">
                             <label class="form-label">Item Type</label>
-                            <select name="menu_type" placeholder="Item Type" class="form-control"  required>
+                            <select name="menu_type" placeholder="Item Type" class="form-control" required>
                                 <option value="">Select Type</option>
                                 <option value="Steak and Ribs">Steak and Ribs</option>
                                 <option value="Seafood">Seafood</option>
 
                                 <!-- mengambil isi/values length dari enum type -->
                                 <!-- <?php
-                                
-                                $enumValues = getEnumValues('menu', 'item_type');
-                                foreach ($enumValues as $value): ?>
+
+                                        $enumValues = getEnumValues('menu', 'item_type');
+                                        foreach ($enumValues as $value): ?>
                                     <option name="menu_type" value="<?= $value ?>"><?= $value ?></option>
                                 <?php endforeach; ?> -->
                             </select>
@@ -217,4 +217,4 @@ if (isset($_POST['addMenu'])) {
                 
                 '; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

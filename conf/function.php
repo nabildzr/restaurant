@@ -99,7 +99,7 @@ function register($data)
     $queryEmail = query("SELECT email FROM accounts WHERE email = '$email'");
 
     if (count($queryEmail) > 0) {
-        echo "<script>window.location.href = '/restaurant/register/?reg=-1'</script>";
+        echo "<script>window.location.href = '/register/?reg=-1'</script>";
         return false;
     }
 
@@ -142,13 +142,13 @@ function addToCart($data)
 
     // Jika quantity lebih dari 10 maka akan di arahkan ke halaman shop-single.php dengan parameter status = 3
     if ($quantity > 10) {
-        echo "<script>window.location.href = '/restaurant/shop/shop-single.php?id=" . $itemId . "&status=3</script>";
+        echo "<script>window.location.href = '/shop/shop-single.php?id=" . $itemId . "&status=3</script>";
         return 5;
     }
 
     // Jika quantity lebih dari 11 maka akan di arahkan ke halaman shop-single.php dengan parameter status = 5
     if($quantity > 11) {
-        echo "<script>window.location.href = '/restaurant/shop/shop-single.php?id=" . $itemId . "&status=5</script>";
+        echo "<script>window.location.href = '/shop/shop-single.php?id=" . $itemId . "&status=5</script>";
         return 4;
     }
 
@@ -162,7 +162,7 @@ function addToCart($data)
     if (mysqli_num_rows($result) > 0) {
         // Jika quantity yang akan di tambahkan lebih dari 10 maka akan di arahkan ke halaman shop-single.php dengan parameter status = 4
         if($row['quantity'] + $quantity > 10) {
-            echo "<script>window.location.href = '/restaurant/shop/shop-single.php?id=" . $itemId . "&status=4</script>";
+            echo "<script>window.location.href = '/shop/shop-single.php?id=" . $itemId . "&status=4</script>";
             return 14;
         }
 

@@ -3,12 +3,12 @@
 $title = 'Edit Menu';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 
 <?php
@@ -17,7 +17,7 @@ if (isset($_GET['table_id'])) {
     if (empty($_GET['table_id'])) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/tables/?alert=400";
+            window.location.href = "/admin/tables/?alert=400";
         </script>
 <?php
     } else {
@@ -32,11 +32,11 @@ if (isset($_POST['confirm'])) {
     if (editTable($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/tables/?alert=3";
+            window.location.href = "/admin/tables/?alert=3";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/tables/edit-table.php?tszable_id=<?= $tableID ?>&alert=13";
+            window.location.href = "/admin/tables/edit-table.php?tszable_id=<?= $tableID ?>&alert=13";
         </script>
 <?php
     }
@@ -91,4 +91,4 @@ if (isset($_POST['confirm'])) {
                 
                 '; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

@@ -1,9 +1,9 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/connection.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/conf/function.php';
+<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
+require_once __DIR__ .  '/conf/connection.php';
+require_once __DIR__ . '/conf/function.php';
 
 if (isset($_SESSION['isLogin']) == false) {
-    echo '<script>window.location.href = "/restaurant/index.php"</script>';
+    echo '<script>window.location.href = "/index.php"</script>';
 }
 ?>
 
@@ -167,4 +167,4 @@ if (isset($_SESSION['isLogin']) == false) {
         </div>
     </div>
 </main>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php'; ?>
+<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php'; ?>

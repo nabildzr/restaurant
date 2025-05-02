@@ -14,7 +14,7 @@
 
 
 // Load database credentials from a secure location
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/config.php';
+require_once __DIR__ .  '/conf/config.php';
 
 // Create a connection using mysqli
 $conn = new mysqli($host, $user, $password, $database);

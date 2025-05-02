@@ -3,23 +3,23 @@
 $title = 'Edit Staff';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['confirm'])) {
     if (editStaff($_POST) < 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/staff/edit-staff.php?staff_id=<?= $staffId ?>&alert=13";
+            window.location.href = "/admin/staff/edit-staff.php?staff_id=<?= $staffId ?>&alert=13";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/staff/?alert=3";
+            window.location.href = "/admin/staff/?alert=3";
         </script>
     <?php
     }
@@ -30,7 +30,7 @@ if (isset($_GET['staff_id'])) {
     if (empty($_GET['staff_id'])) {
     ?>
         <script>
-            window.location.href = "/restaurant/admin/staff/?alert=21";
+            window.location.href = "/admin/staff/?alert=21";
         </script>
 <?php
     } else {
@@ -99,4 +99,4 @@ if (isset($_GET['staff_id'])) {
     </div>
 </div>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

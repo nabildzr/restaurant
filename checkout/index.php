@@ -1,6 +1,6 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
+<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/function.php';
+require_once __DIR__ .  '/conf/function.php';
 
 $memberId = $_SESSION['memberId'];
 
@@ -199,35 +199,35 @@ $memberId = $_SESSION['memberId'];
 								</span>
 							</li>
 							<?php
-                            // kode di bawah ini digunakan untuk menghitung total biaya
-                            // yang dihitung dari setiap item di cart, lalu dijumlahkan
-                            // menjadi total biaya yang harus dibayarkan
-                            //
-                            //foreach digunakan untuk mengulang setiap item di cart
-                            //
-                            // Jika item memiliki diskon, maka harga yang dihitung
-                            // adalah harga asli dikurangi diskon
-                            //
-                            // number_format() digunakan untuk memformat biaya agar
-                            // terlihat lebih bagus
-                            //
-                            foreach ($item as $cart) :
-                            ?>
-                                <?php
-                                // jika item memiliki diskon, maka tampilkan diskonya
-                                //
-                                if ($cart['discount'] > 0) :
-                                ?>
-                                    <li>
+							// kode di bawah ini digunakan untuk menghitung total biaya
+							// yang dihitung dari setiap item di cart, lalu dijumlahkan
+							// menjadi total biaya yang harus dibayarkan
+							//
+							//foreach digunakan untuk mengulang setiap item di cart
+							//
+							// Jika item memiliki diskon, maka harga yang dihitung
+							// adalah harga asli dikurangi diskon
+							//
+							// number_format() digunakan untuk memformat biaya agar
+							// terlihat lebih bagus
+							//
+							foreach ($item as $cart) :
+							?>
+								<?php
+								// jika item memiliki diskon, maka tampilkan diskonya
+								//
+								if ($cart['discount'] > 0) :
+								?>
+									<li>
 										<?= $cart['item_name'] ?> (<b><?= $cart['discount'] ?>% off</b>)
-                                        <span>
+										<span>
 											<?= 'Rp. ' . number_format($cart['quantity'] * ($cart['item_price'] - $cart['item_price'] * ($cart['discount'] / 100)), 0, ',', '.') ?>
-                                        </span>
-                                    </li>
-                            <?php
-                                endif;
-                            endforeach;
-                            ?>
+										</span>
+									</li>
+							<?php
+								endif;
+							endforeach;
+							?>
 							<!-- <li>Delivery fee<span>$10</span></li> -->
 							<li class="total">Total<span>
 									<?php
@@ -257,4 +257,4 @@ $memberId = $_SESSION['memberId'];
 </main>
 <!-- /main -->
 <!-- footer -->
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php' ?>
+<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php' ?>

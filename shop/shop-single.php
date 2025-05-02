@@ -1,6 +1,6 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
+<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/function.php';
+require_once __DIR__ .  '/conf/function.php';
 ?>
 
 
@@ -11,9 +11,9 @@ require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/function.php';
 $userId = $_SESSION['memberId'];
 
 
-if(isset($_SESSION['isLogin']) == false) {
-    echo '<script>window.location.href = "/restaurant/login/"</script>';
-} 
+if (isset($_SESSION['isLogin']) == false) {
+    echo '<script>window.location.href = "/login/"</script>';
+}
 
 if (isset($_GET['id'])) {
     // Mendapatkan id item yang akan ditampilkan
@@ -43,7 +43,7 @@ if (isset($_GET['id'])) {
     // hitung diskon dalam persen, contoh diskon 25%
     $discountPercent = round($data['discount']);
 
-    
+
     $discountPrice = $data['item_price'] - ($data['item_price'] * ($data['discount'] / 100));
 
     // format harga setelah diskon, contoh = 7500 -> 7.500
@@ -59,7 +59,6 @@ if (isset($_GET['id'])) {
     // Jika hasil query cart tidak kosong maka simpan hasilnya dalam variabel $cart
     // Jika hasil query cart kosong maka simpan null dalam variabel $cart
     $cart = (!empty($resultCart)) ? $resultCart[0] : null;
-    
 }
 
 // Jika user menekan tombol "Add to cart" maka akan masuk ke dalam fungsi addToCart()
@@ -85,7 +84,7 @@ if (isset($_POST['addToCart'])) {
         default => 0,
     };
 
-    echo "<script>window.location.href = '/restaurant/shop/shop-single.php?id=" . $_POST['item_id'] . "&status=" . $status . "&item=" . $data['item_name'] . "&quantity=" . $_POST['quantity_1'] . "'</script>";
+    echo "<script>window.location.href = '/shop/shop-single.php?id=" . $_POST['item_id'] . "&status=" . $status . "&item=" . $data['item_name'] . "&quantity=" . $_POST['quantity_1'] . "'</script>";
 }
 
 
@@ -95,7 +94,7 @@ if (isset($_POST['addToCart'])) {
 <?php
 $heading = "
 	   <!-- SPECIFIC CSS -->
-    <link href='/restaurant/assets/css/shop.css' rel='stylesheet'>
+    <link href='/assets/css/shop.css' rel='stylesheet'>
     ";
 
 echo $heading;
@@ -123,15 +122,15 @@ echo $heading;
         <div class="row">
             <div class="col-lg-6 magnific-gallery">
                 <p>
-                    <a href="/restaurant/admin/images/<?= $data['item_image'] ?>" title="<?= $data['item_name'] ?>"
+                    <a href="/admin/images/<?= $data['item_image'] ?>" title="<?= $data['item_name'] ?>"
                         data-effect="mfp-zoom-in" style="justify-content: center; display: flex;"><img
-                            src="/restaurant/admin/images/<?= $data['item_image'] ?>" alt=""
+                            src="/admin/images/<?= $data['item_image'] ?>" alt=""
                             style="width: 20em; height: 20em; " class="img-fluid"></a>
                 </p>
 
                 <!-- IF YOU WANT TO ADD ANOTHER IMAGE THEN WILL HAVE STATIC SCROLL -->
                 <!-- <p>
-                    <a href="img/shop/2-small.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="/restaurant/assets/img/shop/2-small.jpg" alt="" class="img-fluid lazy"></a>
+                    <a href="img/shop/2-small.jpg" title="Photo title" data-effect="mfp-zoom-in"><img src="/assets/img/shop/2-small.jpg" alt="" class="img-fluid lazy"></a>
                 </p> -->
             </div>
             <div class="col-lg-6" id="sidebar_fixed">
@@ -145,7 +144,7 @@ echo $heading;
                         <?php
 
                         $lastPrice = ($data['discount_status'] > 0) ? $discountPrice : $data['item_price'];
-                         
+
                         ?>
                         <input type="text" name="price" value="<?= $lastPrice ?>" class="form-control" hidden />
 
@@ -159,13 +158,13 @@ echo $heading;
                         <div class="prod_options">
                             <div class="row">
                                 <div class="col-auto">
-                                    <?php if($cart): ?>
-                                    <p class="mb-0">This item is already in your cart, if you want to change the quantity or remove it, please <a href="/restaurant/client/ ">Check your cart.</a></p>
+                                    <?php if ($cart): ?>
+                                        <p class="mb-0">This item is already in your cart, if you want to change the quantity or remove it, please <a href="/client/ ">Check your cart.</a></p>
                                     <?php else: ?>
-                                    <p class="mb-0"><a>You haven't add this item to your cart yet.</a></p>
+                                        <p class="mb-0"><a>You haven't add this item to your cart yet.</a></p>
                                     <?php endif; ?>
                                 </div>
-                  
+
                                 <div class="col">
                                     <p class="mb-0">In Cart: <b> <?= $cart ? $cart['quantity'] : 0 ?> <?= $data['item_name'] ?></b></p>
                                 </div>
@@ -394,4 +393,4 @@ echo $script;
 
 
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php';
+<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php';

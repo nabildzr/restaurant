@@ -3,23 +3,23 @@
 $title = 'Edit Menu';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['confirm'])) {
     if (editMenu($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/menu/?alert=3";
+            window.location.href = "/admin/menu/?alert=3";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/menu/edit-menu.php?item_id=<?= $menuId ?>&alert=13";
+            window.location.href = "/admin/menu/edit-menu.php?item_id=<?= $menuId ?>&alert=13";
         </script>
     <?php
     }
@@ -30,7 +30,7 @@ if (isset($_GET['item_id'])) {
     if (empty($_GET['item_id'])) {
     ?>
         <script>
-            window.location.href = "/restaurant/admin/menu/?alert=400";
+            window.location.href = "/admin/menu/?alert=400";
         </script>
 <?php
     } else {
@@ -94,7 +94,7 @@ if (isset($_GET['item_id'])) {
                         <iconify-icon icon="fe:check-circle" class="text-xl"></iconify-icon>
                     </span>
                     <select name="discount_status" class="form-control flex-grow-1">
-                    <option value="<?= $data['discount_status'] ?>" hidden><?= ($data['discount_status'] == 1) ? "Active" : "Inactive" ?></option>
+                        <option value="<?= $data['discount_status'] ?>" hidden><?= ($data['discount_status'] == 1) ? "Active" : "Inactive" ?></option>
 
                         <option value="0">Inactive</option>
                         <option value="1">Active</option>
@@ -109,7 +109,7 @@ if (isset($_GET['item_id'])) {
                 </div>
             </div>
 
-        
+
 
             <div class="col-12">
                 <label class="form-label">Description</label>
@@ -123,7 +123,7 @@ if (isset($_GET['item_id'])) {
                         <button type="button" class="uploaded-img__remove position-absolute top-0 end-0 z-1 text-2xxl line-height-1 me-8 mt-8 d-flex" onclick="removeImage()">
                             <iconify-icon icon="radix-icons:cross-2" class="text-xl text-danger-600"></iconify-icon>
                         </button>
-                        <img id="uploaded-img__preview" class="w-100 h-100 object-fit-cover" src="/restaurant/admin/images/<?= $data['item_image'] ?>" alt="image">
+                        <img id="uploaded-img__preview" class="w-100 h-100 object-fit-cover" src="/admin/images/<?= $data['item_image'] ?>" alt="image">
                     </div>
 
                     <label class="upload-file h-120-px w-120-px border input-form-light radius-8 overflow-hidden border-dashed bg-neutral-50 bg-hover-neutral-200 d-flex align-items-center flex-column justify-content-center gap-1" for="upload-file">
@@ -175,4 +175,4 @@ if (isset($_GET['item_id'])) {
                 
                 '; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

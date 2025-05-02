@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/conf/function.php';
+require_once __DIR__ . '/conf/function.php';
 
 
 if (isset($_SESSION['isLogin']) == true) {
@@ -14,7 +14,7 @@ if (isset($_SESSION['isLogin']) == true) {
     <div class="layer"></div><!-- Opacity Mask Menu Mobile -->
     <div class="container-fluid">
         <div id="logo">
-            <a href="/restaurant/">
+            <a href="/">
                 <img src="https://www.ansonika.com/foores/img/logo.svg" width="140" height="35" alt=""
                     class="logo_normal">
                 <img src="https://www.ansonika.com/foores/img/logo_sticky.svg" width="140" height="35" alt=""
@@ -27,7 +27,7 @@ if (isset($_SESSION['isLogin']) == true) {
             <?php if (isset($_SESSION['isLogin']) == true) : ?><li>
                     <div class="dropdown dropdown-cart">
                         <?php $count = count(query("SELECT * FROM cart WHERE member_id = $memberID")); ?>
-                        <a href="/restaurant/cart/" class="cart_bt">
+                        <a href="/cart/" class="cart_bt">
                             <strong>
                                 <?= $count ?>
                             </strong>
@@ -49,7 +49,7 @@ if (isset($_SESSION['isLogin']) == true) {
                                 ?>
                                     <li>
                                         <figure>
-                                            <img src="/restaurant/admin/images/<?= $item['item_image'] ?>"
+                                            <img src="/admin/images/<?= $item['item_image'] ?>"
                                                 alt="" width="50" height="50" class="lazy">
                                         </figure>
                                         <strong>
@@ -69,11 +69,11 @@ if (isset($_SESSION['isLogin']) == true) {
                                             ?>
                                             <?= 'Rp. ' . number_format(($item['discount'] > 0 ? $discountPrice : $item['item_price']) * $item['quantity'], 0, ',', '.') ?>
                                         </strong>
-                                        
+
 
 
                                         <!-- delete cart -->
-                                        <a href="/restaurant/shop/delete-cart.php?itemId=<?= $item['item_id'] ?>" class="action"><i class="icon_trash_alt"></i></a>
+                                        <a href="/shop/delete-cart.php?itemId=<?= $item['item_id'] ?>" class="action"><i class="icon_trash_alt"></i></a>
                                     </li>
 
 
@@ -119,10 +119,10 @@ if (isset($_SESSION['isLogin']) == true) {
                                         <?= 'Rp. ' . number_format($total, 0, ',', '.'); ?>
                                     </span>
                                 </div>
-                                <a href="/restaurant/cart/" class="btn_1 outline">
+                                <a href="/cart/" class="btn_1 outline">
                                     View Cart
                                 </a>
-                                <a href="/restaurant/checkout"
+                                <a href="/checkout"
                                     class="btn_1">
                                     Checkout
                                 </a>
@@ -142,12 +142,12 @@ if (isset($_SESSION['isLogin']) == true) {
                 <a href="#0" class="open_close">
                     <i class="icon_close"></i><span>Menu</span>
                 </a>
-                <a href="/restaurant/"><img src="https://www.ansonika.com/foores/img/logo.svg" width="140" height="35"
+                <a href="/"><img src="https://www.ansonika.com/foores/img/logo.svg" width="140" height="35"
                         alt=""></a>
             </div>
             <ul>
                 <li class="submenu">
-                    <a href="/restaurant/" class="show-submenu">Home</a>
+                    <a href="/" class="show-submenu">Home</a>
                     <ul>
                         <li><a href="index-7.html">KenBurns Slider <span class="badge text-bg-danger">New</span></a>
                         </li>
@@ -190,14 +190,14 @@ if (isset($_SESSION['isLogin']) == true) {
                     </ul>
                 </li>
                 <li class="submenu">
-                    <a href="/restaurant/shop/" class="show-submenu">Shop</a>
+                    <a href="/shop/" class="show-submenu">Shop</a>
 
                 </li>
-                <li><a href="/restaurant/reservation/">Reservations</a></li>
+                <li><a href="/reservation/">Reservations</a></li>
 
                 <?php if (isset($_SESSION['isLogin']) == false) { ?>
                     <li>
-                        <a href="/restaurant/login/" class="btn_top">Login</a>
+                        <a href="/login/" class="btn_top">Login</a>
                     </li>
 
                 <?php } else { ?>
@@ -205,13 +205,13 @@ if (isset($_SESSION['isLogin']) == true) {
                         <a href="#0" class="show-submenu btn_top "><i class="ri-id-card-line"
                                 style="margin-right: 7px"></i><?= $member['member_name'] ?: 'Guest'  ?></a>
                         <ul>
-                            <li><a href="/restaurant/client/">Dashboard</a></li>
+                            <li><a href="/client/">Dashboard</a></li>
 
                             <!-- jika member point kosong maka akan di berikan 0 dan itupun berlaku untuk point jika null -->
                             <li><a href="javascript:0;">Points:
                                     <?= $member['points'] == null  ? '0' : $member['points'] ?></a>
                             </li>
-                            <li><a href="/restaurant/logout.php">Logout</a></li>
+                            <li><a href="/logout.php">Logout</a></li>
                         </ul>
                     </li>
                 <?php } ?>

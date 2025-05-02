@@ -2,7 +2,7 @@
 session_start();
 
 if(!isset($_SESSION['isLogin'])) {
-    header('location: /restaurant/?in=-4');
+    header('location: /?in=-4');
     exit();
 }
 ?>
@@ -47,9 +47,9 @@ if(!isset($_SESSION['isLogin'])) {
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require $_SERVER['DOCUMENT_ROOT']  . '/restaurant/phpmailer/src/Exception.php';
-require $_SERVER['DOCUMENT_ROOT']  . '/restaurant/phpmailer/src/PHPMailer.php';
-require $_SERVER['DOCUMENT_ROOT']  . '/restaurant/phpmailer/src/SMTP.php';
+require __DIR__  . '/phpmailer/src/Exception.php';
+require __DIR__  . '/phpmailer/src/PHPMailer.php';
+require __DIR__  . '/phpmailer/src/SMTP.php';
 
 $mail = new PHPMailer(true);
 

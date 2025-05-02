@@ -1,7 +1,7 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/connection.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/conf/function.php';
+include_once __DIR__ . '/partials/layouts/layout-top.php';
+require_once __DIR__ .  '/conf/connection.php';
+require_once __DIR__ . '/conf/function.php';
 ?>
 
 
@@ -612,6 +612,6 @@ if (isset($_GET['type'])) {
 
 
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-footer.php';
+include_once __DIR__ . '/partials/layouts/layout-footer.php';
 
 ?>

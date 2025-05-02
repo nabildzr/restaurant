@@ -1,5 +1,5 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/conf/connection.php';
+require_once __DIR__ . '/conf/connection.php';
 
 function query($query)
 {
@@ -124,7 +124,7 @@ function changeProfileImage()
 
 
     // upload gambar ke folder images
-    move_uploaded_file($tmpName, $_SERVER['DOCUMENT_ROOT'] . '/restaurant/assets/images/users/' . $namaFileBaru);
+    move_uploaded_file($tmpName, __DIR__ . '/assets/images/users/' . $namaFileBaru);
 
     return $namaFileBaru;
 }

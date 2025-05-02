@@ -3,7 +3,7 @@ session_start();
 require_once('conf/connection.php');
 
 if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
-    header('Location: /restaurant/admin/index.php');
+    header('Location: /admin/index.php');
     exit();
 }
 
@@ -60,41 +60,41 @@ if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wowdash - Bootstrap 5 Admin Dashboard HTML Template</title>
-    <link rel="icon" type="image/png" href="/restaurant/assets_dashboard/assets/images/favicon.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/assets_dashboard/assets/images/favicon.png" sizes="16x16">
     <!-- remix icon font css  -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/remixicon.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/remixicon.css">
     <!-- BootStrap css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/bootstrap.min.css">
     <!-- Apex Chart css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/apexcharts.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/apexcharts.css">
     <!-- Data Table css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/dataTables.min.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/dataTables.min.css">
     <!-- Text Editor css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/editor-katex.min.css">
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/editor.atom-one-dark.min.css">
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/editor.quill.snow.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/editor-katex.min.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/editor.atom-one-dark.min.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/editor.quill.snow.css">
     <!-- Date picker css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/flatpickr.min.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/flatpickr.min.css">
     <!-- Calendar css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/full-calendar.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/full-calendar.css">
     <!-- Vector Map css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/jquery-jvectormap-2.0.5.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/jquery-jvectormap-2.0.5.css">
     <!-- Popup css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/magnific-popup.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/magnific-popup.css">
     <!-- Slick Slider css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/slick.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/slick.css">
     <!-- prism css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/prism.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/prism.css">
     <!-- file upload css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/file-upload.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/file-upload.css">
 
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/lib/audioplayer.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/lib/audioplayer.css">
 
     <!-- sweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- main css -->
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/style.css">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/style.css">
 </head>
 
 <body>
@@ -127,7 +127,7 @@ if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
                 $_SESSION['role'] = $staff['staff_role'];
                 $_SESSION['isAdmin'] = true;
 
-    
+
 
                 header('location: index.php');
                 exit();
@@ -169,7 +169,7 @@ if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
             <div class="max-w-464-px mx-auto w-100">
                 <div>
                     <a href="index.php" class="mb-40 max-w-290-px">
-                        <img src="/restaurant/assets/img/logo.svg" alt="">
+                        <img src="/assets/img/logo.svg" alt="">
                     </a>
                     <h4 class="mb-12">Sign In with your Staff ID</h4>
                     <p class="mb-32 text-secondary-light text-lg">Welcome back! please enter your detail</p>
@@ -232,37 +232,37 @@ if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin'] === true) {
     </section>
 
     <!-- jQuery library js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/jquery-3.7.1.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/jquery-3.7.1.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/bootstrap.bundle.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/bootstrap.bundle.min.js"></script>
     <!-- Apex Chart js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/apexcharts.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/apexcharts.min.js"></script>
     <!-- Data Table js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/dataTables.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/dataTables.min.js"></script>
     <!-- Iconify Font js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/iconify-icon.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/iconify-icon.min.js"></script>
     <!-- jQuery UI js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/jquery-ui.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/jquery-ui.min.js"></script>
     <!-- Vector Map js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/jquery-jvectormap-2.0.5.min.js"></script>
-    <script src="/restaurant/assets_dashboard/assets/js/lib/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/jquery-jvectormap-2.0.5.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/jquery-jvectormap-world-mill-en.js"></script>
     <!-- Popup js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/magnifc-popup.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/magnifc-popup.min.js"></script>
     <!-- Slick Slider js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/slick.min.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/slick.min.js"></script>
     <!-- prism js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/prism.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/prism.js"></script>
     <!-- file upload js -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/file-upload.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/file-upload.js"></script>
     <!-- audioplayer -->
-    <script src="/restaurant/assets_dashboard/assets/js/lib/audioplayer.js"></script>
+    <script src="/assets_dashboard/assets/js/lib/audioplayer.js"></script>
 
     <!-- sweetalertsssss -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.1/dist/sweetalert2.all.min.js"></script>
 
 
     <!-- main js -->
-    <script src="/restaurant/assets_dashboard/assets/js/app.js"></script>
+    <script src="/assets_dashboard/assets/js/app.js"></script>
 
     <script>
         // ================== Password Show Hide Js Start ==========

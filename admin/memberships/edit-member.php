@@ -3,39 +3,38 @@
 $title = 'Edit Memberships';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['confirm'])) {
     if (editMembership($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/memberships/?alert=3";
+            window.location.href = "/admin/memberships/?alert=3";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/memberships/edit-members?member_id=<?= $memberId ?>&alert=13";
+            window.location.href = "/admin/memberships/edit-members?member_id=<?= $memberId ?>&alert=13";
         </script>
     <?php
     }
-} 
+}
 
 if (isset($_GET['member_id'])) {
     $memberId = $_GET['member_id'];
     if (empty($_GET['member_id'])) {
     ?>
         <script>
-            window.location.href = "/restaurant/admin/memberships/?alert=21";
+            window.location.href = "/admin/memberships/?alert=21";
         </script>
 <?php
     } else {
         $data = query("SELECT * FROM memberships WHERE member_id = $memberId")[0];
-
     }
 }
 
@@ -50,8 +49,8 @@ if (isset($_GET['member_id'])) {
     </div>
     <div class="card-body">
         <form method="post" action="">
-            
-        <input type="text" name="member_id" value="<?= $memberId ?>" hidden>
+
+            <input type="text" name="member_id" value="<?= $memberId ?>" hidden>
 
             <div class="col-12">
                 <label class="form-label">Membership Name</label>
@@ -88,11 +87,11 @@ $data = mysqli_fetch_array($query);
 $idAccount = (int) $data['kodeTerbesar']; //? Mengonversi langsung ke integer
 
 switch ($idAccount) {
-        // jika 0 maka ganti ke 1
+    // jika 0 maka ganti ke 1
     case 0:
         $idAccount = 1;
         break;
-        // mengembalikan seperti normal
+    // mengembalikan seperti normal
     default:
         $idAccount++;
         break;
@@ -161,4 +160,4 @@ switch ($idAccount) {
                 
                 '; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

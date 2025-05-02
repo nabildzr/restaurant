@@ -586,7 +586,7 @@ function changeProfileImage()
 
 
     // upload gambar ke folder images
-    move_uploaded_file($tmpName, $_SERVER['DOCUMENT_ROOT'] . '/restaurant/assets/images/users/' . $namaFileBaru);
+    move_uploaded_file($tmpName, __DIR__ . '/assets/images/users/' . $namaFileBaru);
 
     return $namaFileBaru;
 }

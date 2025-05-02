@@ -72,8 +72,8 @@
 
 		<ul id="banners_grid" class="clearfix">
 			<li>
-				<a href="/restaurant/shop/" class="img_container">
-					<img src="/restaurant/assets/img/banners_cat_placeholder.jpg" data-src="https://images.pexels.com/photos/26076229/pexels-photo-26076229/free-photo-of-delicious-japanese-wraps-on-plate.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="lazy">
+				<a href="/shop/" class="img_container">
+					<img src="/assets/img/banners_cat_placeholder.jpg" data-src="https://images.pexels.com/photos/26076229/pexels-photo-26076229/free-photo-of-delicious-japanese-wraps-on-plate.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="lazy">
 					<div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
 						<h3>Our Menu</h3>
 						<p>View Our Specialites</p>
@@ -81,8 +81,8 @@
 				</a>
 			</li>
 			<li>
-				<a href="/restaurant/" class="img_container">
-					<img src="/restaurant/assets/img/banners_cat_placeholder.jpg" data-src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="lazy">
+				<a href="/" class="img_container">
+					<img src="/assets/img/banners_cat_placeholder.jpg" data-src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="lazy">
 					<div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
 						<h3>Delivery</h3>
 						<p>Home delivery or take away food</p>
@@ -91,7 +91,7 @@
 			</li>
 			<li>
 				<a href="gallery.html" class="img_container">
-					<img src="/restaurant/assets/img/banners_cat_placeholder.jpg" data-src="https://images.pexels.com/photos/8951296/pexels-photo-8951296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="lazy">
+					<img src="/assets/img/banners_cat_placeholder.jpg" data-src="https://images.pexels.com/photos/8951296/pexels-photo-8951296.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="lazy">
 					<div class="short_info opacity-mask" data-opacity-mask="rgba(0, 0, 0, 0.5)">
 						<h3>Inside Foores</h3>
 						<p>View the Gallery</p>
@@ -106,7 +106,7 @@
 				<div class="row justify-content-center d-flex align-items-center">
 					<div class="col-lg-5 text-lg-center d-none d-lg-block" data-cue="slideInUp">
 						<figure>
-							<img src="/restaurant/assets/img/home_1_placeholder.png" data-src="https://images.pexels.com/photos/29259651/pexels-photo-29259651/free-photo-of-elegant-gourmet-dish-on-black-marble-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="354" height="440" alt="" class="img-fluid lazy">
+							<img src="/assets/img/home_1_placeholder.png" data-src="https://images.pexels.com/photos/29259651/pexels-photo-29259651/free-photo-of-elegant-gourmet-dish-on-black-marble-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" width="354" height="440" alt="" class="img-fluid lazy">
 							<a href="https://www.youtube.com/watch?v=MO7Hi_kBBBg" class="btn_play" data-cue="zoomIn" data-delay="500"><span class="pulse_bt"><i class="arrow_triangle-right"></i></span></a>
 						</figure>
 					</div>
@@ -118,7 +118,7 @@
 						</div>
 						<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-						<p><img src="/restaurant/assets/img/signature.png" width="140" height="50" alt="" class="mt-3"></p>
+						<p><img src="/assets/img/signature.png" width="140" height="50" alt="" class="mt-3"></p>
 					</div>
 				</div>
 				<!--/row -->
@@ -140,9 +140,9 @@
 							<small>Special Offer</small>
 							<h3>Burgher Menu $18 only</h3>
 							<p>Hamburgher, Chips, Mix Sausages, Beer, Muffin</p>
-							<a href="/restaurant/reservation/" class="btn_1">Reserve now</a>
+							<a href="/reservation/" class="btn_1">Reserve now</a>
 						</div>
-						<figure class="d-none d-lg-block"><img src="/restaurant/assets/img/banner.svg" alt="" width="200" height="200" class="img-fluid"></figure>
+						<figure class="d-none d-lg-block"><img src="/assets/img/banner.svg" alt="" width="200" height="200" class="img-fluid"></figure>
 					</div>
 					<!-- /wrapper -->
 				</div>
@@ -163,8 +163,8 @@
 						<div class="col-lg-6" data-cue="slideInUp">
 							<div class="menu_item">
 								<figure>
-									<a href="/restaurant/admin/images/<?= htmlspecialchars($menu['item_image']) ?>" title="<?= htmlspecialchars($menu['item_name']) ?>" data-effect="mfp-zoom-in">
-										<img src="/restaurant/admin/images/<?= htmlspecialchars($menu['item_image']) ?>" data-src="/restaurant/admin/images/<?= htmlspecialchars($menu['item_image']) ?>" class="lazy" alt="">
+									<a href="/admin/images/<?= htmlspecialchars($menu['item_image']) ?>" title="<?= htmlspecialchars($menu['item_name']) ?>" data-effect="mfp-zoom-in">
+										<img src="/admin/images/<?= htmlspecialchars($menu['item_image']) ?>" data-src="/admin/images/<?= htmlspecialchars($menu['item_image']) ?>" class="lazy" alt="">
 									</a>
 								</figure>
 								<div class="menu_title">
@@ -211,7 +211,7 @@
 							<h2>Reserve a table</h2>
 							<p>or Call us at 0344 32423453</p>
 						</div>
-						<a class=""><a href="/restaurant/reservation/" class="btn_1 outline" data-cue="zoomIn">Reserve Now</a></a>
+						<a class=""><a href="/reservation/" class="btn_1 outline" data-cue="zoomIn">Reserve Now</a></a>
 
 
 					</div>
@@ -225,4 +225,4 @@
 	<!-- /main -->
 
 
-	<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php' ?>
+	<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php' ?>

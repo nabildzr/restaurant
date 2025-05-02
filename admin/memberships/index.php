@@ -3,23 +3,23 @@
 $title = 'Memberships';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['addMember'])) {
     if (addMembership($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/memberships/?alert=2";
+            window.location.href = "/admin/memberships/?alert=2";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/memberships/?alert=12";
+            window.location.href = "/admin/memberships/?alert=12";
         </script>
 <?php
     }
@@ -240,4 +240,4 @@ $idMember = $next_member_id = getNextAvailableMemberID();
                 
                 '; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/client/conf/function.php';
+include_once __DIR__ .  '/client/conf/function.php';
 
 // user
 
@@ -31,14 +31,14 @@ if (count($segments) >= 3 && $segments[1] == 'client') {
             if (updateProfileMemberships($_POST) > 0) {
         ?>
                 <script>
-                    window.location.href = "/restaurant/client/<?= $_SESSION['username'] ?>?updated=1";
+                    window.location.href = "/client/<?= $_SESSION['username'] ?>?updated=1";
                 </script>
 
             <?php
             } else {
             ?>
                 <script>
-                    window.location.href = "/restaurant/client/<?= $_SESSION['username'] ?>?updated=0";
+                    window.location.href = "/client/<?= $_SESSION['username'] ?>?updated=0";
                 </script>
         <?php
             }
@@ -50,14 +50,14 @@ if (count($segments) >= 3 && $segments[1] == 'client') {
             if (updatePassword($_POST) > 0) {
         ?>
                 <script>
-                    window.location.href = "/restaurant/client/<?= $_SESSION['username'] ?>?updated=1";
+                    window.location.href = "/client/<?= $_SESSION['username'] ?>?updated=1";
                 </script>
 
             <?php
             } else {
             ?>
                 <script>
-                    window.location.href = "/restaurant/client/<?= $_SESSION['username'] ?>?updated=0";
+                    window.location.href = "/client/<?= $_SESSION['username'] ?>?updated=0";
                 </script>
         <?php
             }
@@ -75,7 +75,7 @@ if (count($segments) >= 3 && $segments[1] == 'client') {
                     <img src="https://i.pinimg.com/736x/e9/83/d1/e983d1695c904346be3cf43449d108ef.jpg" alt="" class="w-100 object-fit-cover  h-30">
                     <div class="pb-24 ms-16 mb-24 me-16  mt--100">
                         <div class="text-center border border-top-0 border-start-0 border-end-0">
-                            <img src="/restaurant/assets/images/users/<?= htmlspecialchars($userData['member_image'] ?? 'default.jpg') ?>" alt="" class="border br-white border-width-2-px w-200-px h-200-px rounded-circle object-fit-cover">
+                            <img src="/assets/images/users/<?= htmlspecialchars($userData['member_image'] ?? 'default.jpg') ?>" alt="" class="border br-white border-width-2-px w-200-px h-200-px rounded-circle object-fit-cover">
                             <h6 class="mb-0 mt-16"><?= htmlspecialchars($userData['member_name'])  ?></h6>
                             <span class="text-secondary-light mb-16"><?= htmlspecialchars($userData['email']) ?></span>
                         </div>
@@ -137,7 +137,7 @@ if (count($segments) >= 3 && $segments[1] == 'client') {
                                             <div class="avatar-preview">
                                                 <div id="imagePreview" style='
                                                 background-image: url(
-                                                "/restaurant/assets/images/users/<?= htmlspecialchars($userData['member_image'] ?? 'default.jpg') ?>"
+                                                "/assets/images/users/<?= htmlspecialchars($userData['member_image'] ?? 'default.jpg') ?>"
                                                 ); 
                                                 background-size: cover;
                                                 background-repeat: no-repeat;
@@ -162,7 +162,7 @@ if (count($segments) >= 3 && $segments[1] == 'client') {
                                             <div class="mb-20">
                                                 <label for="email" class="form-label fw-semibold text-primary-light text-sm mb-8">Email <span class="text-danger-600">*</span></label>
                                                 <input type="email" class="form-control radius-8" id="email"
-                                                   placeholder="<?= htmlspecialchars($userData['email']) ?>" readonly>
+                                                    placeholder="<?= htmlspecialchars($userData['email']) ?>" readonly>
                                             </div>
                                         </div>
                                         <style>
@@ -346,16 +346,16 @@ if (count($segments) >= 3 && $segments[1] == 'client') {
 
     } else {
         // Either not logged in or trying to access someone else's profile
-        header('Location: /restaurant/login.php');
+        header('Location: /login.php');
         exit;
     }
 } else {
     // Not found
     $user = $_SESSION['username'];
     if (isset($_SESSION['isLogin'])) {
-        header("location: /restaurant/client/$user");
+        header("location: /client/$user");
     } else {
-        header("location: /restaurant/login/");
+        header("location: /login/");
     }
     echo "404 Not Found";
 }

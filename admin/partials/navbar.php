@@ -22,7 +22,7 @@
 
                 <div class="dropdown">
                     <button class="d-flex justify-content-center align-items-center rounded-circle" type="button" data-bs-toggle="dropdown">
-                        <img src="/restaurant/assets/images/users/<?= $userData['staff_image'] ?: 'default.jpg' ?>" alt="image" class="w-40-px h-40-px object-fit-cover rounded-circle">
+                        <img src="/assets/images/users/<?= $userData['staff_image'] ?: 'default.jpg' ?>" alt="image" class="w-40-px h-40-px object-fit-cover rounded-circle">
                     </button>
                     <div class="dropdown-menu to-top dropdown-menu-sm">
                         <div class="py-12 px-16 radius-8 bg-primary-50 mb-16 d-flex align-items-center justify-content-between gap-2">
@@ -36,12 +36,12 @@
                         </div>
                         <ul class="to-top-list">
                             <li>
-                                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="/restaurant/admin/view-profile.php?id=<?= htmlspecialchars($_SESSION['accountId']) ?>">
+                                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="/admin/view-profile.php?id=<?= htmlspecialchars($_SESSION['accountId']) ?>">
                                     <iconify-icon icon="solar:user-linear" class="icon text-xl"></iconify-icon> My Profile
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3" href="/restaurant/admin/conf/logout.php">
+                                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-danger d-flex align-items-center gap-3" href="/admin/conf/logout.php">
                                     <iconify-icon icon="lucide:power" class="icon text-xl"></iconify-icon> Log Out
                                 </a>
                             </li>

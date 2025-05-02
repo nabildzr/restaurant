@@ -7,8 +7,8 @@
  *
  */
 session_start();
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/connection.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/conf/function.php';
+require_once __DIR__ .  '/conf/connection.php';
+require_once __DIR__ . '/conf/function.php';
 
 if (isset($_POST['signin'])) {
 
@@ -72,26 +72,26 @@ if (isset($_POST['signin'])) {
                     $_SESSION['isLogin'] = true;
 
                     // Redirect ke halaman index
-                    header('location: /restaurant/?in=1');
+                    header('location: /?in=1');
                     exit();
                 } else {
 
                     // Redirect ke halaman login dengan pesan error
-                    header('location: /restaurant/login/?in=-3');
+                    header('location: /login/?in=-3');
                 }
             } else {
 
                 // Redirect ke halaman login dengan pesan error
-                header('location: /restaurant/login/?in=-2');
+                header('location: /login/?in=-2');
             }
         } else {
 
             // Redirect ke halaman login dengan pesan error
-            header('location: /restaurant/login/?in=-1');
+            header('location: /login/?in=-1');
         }
     } else {
 
         // Redirect ke halaman login dengan pesan error
-        header('location: /restaurant/login/?in=0');
+        header('location: /login/?in=0');
     }
 }

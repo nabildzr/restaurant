@@ -16,10 +16,10 @@ session_start();
 
     <!-- Favicons-->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" type="image/x-icon" href="/restaurant/assets/img/apple-touch-icon-57x57-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="/restaurant/assets/img/apple-touch-icon-72x72-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="/restaurant/assets/img/apple-touch-icon-114x114-precomposed.png">
-    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/restaurant/assets/img/apple-touch-icon-144x144-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" href="/assets/img/apple-touch-icon-57x57-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144-precomposed.png">
 
     <!-- GOOGLE WEB FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,21 +27,21 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- BASE CSS -->
-    <link href="/restaurant/assets/css/vendors.min.css" rel="stylesheet">
-    <link href="/restaurant/assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/vendors.min.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
 
     <!-- SPECIFIC CSS -->
-    <link href="/restaurant/assets/css/wizard.css" rel="stylesheet">
-    
-    
+    <link href="/assets/css/wizard.css" rel="stylesheet">
+
+
     <!-- YOUR CUSTOM CSS -->
-    <link href="/restaurant/assets/css/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="/restaurant/assets_dashboard/assets/css/remixicon.css">
+    <link href="/assets/css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets_dashboard/assets/css/remixicon.css">
     <!-- sweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    
-    
-     <!-- custom header per file -->
+
+
+    <!-- custom header per file -->
     <?php echo (isset($heading) ? $heading : '') ?>
 
 
@@ -77,14 +77,14 @@ session_start();
 
 <body>
 
-       <!-- <div id="preloader">
+    <!-- <div id="preloader">
             <div data-loader="circle-side"></div>
         </div>
 
         <div id="loader_form">
             <div data-loader="circle-side-2"></div>
         </div -->
-     <!-- /loader_form  -->
+    <!-- /loader_form  -->
     <!-- /Page Preload -->
     <!-- header -->
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/header.php' ?>
+    <?php include_once __DIR__ . '/partials/header.php' ?>

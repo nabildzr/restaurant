@@ -1,12 +1,12 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
+<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/connection.php';
+require_once __DIR__ .  '/conf/connection.php';
 ?>
 
 <?php
 $heading = '
   <!-- SPECIFIC CSS -->
-      <link href="/restaurant/assets/css/shop.css" rel="stylesheet">';
+      <link href="/assets/css/shop.css" rel="stylesheet">';
 
 echo $heading;
 ?>
@@ -185,7 +185,7 @@ echo $heading;
 							?>
 							<?= $menu['discount_status'] == true ? "<span class='ribbon off'>$discountPercent%</span>" : "" ?>
 
-							<a href="shop-single.php?id=<?= $menu['item_id']?>">
+							<a href="shop-single.php?id=<?= $menu['item_id'] ?>">
 								<style>
 									.img-shop {
 										width: 250px;
@@ -201,7 +201,7 @@ echo $heading;
 										}
 									}
 								</style>
-								<img class="img-fluid img-shop lazy" src="/restaurant/assets/img/menu_items/menu_items_placeholder.png" data-src="/restaurant/admin/images/<?= $menu['item_image']; ?>" alt="">
+								<img class="img-fluid img-shop lazy" src="/assets/img/menu_items/menu_items_placeholder.png" data-src="/admin/images/<?= $menu['item_image']; ?>" alt="">
 								<div class="add_cart"><span class="btn_1">Add to cart</span></div>
 							</a>
 						</figure>
@@ -271,4 +271,4 @@ echo $heading;
 
 </main>
 <!-- /main -->
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php'; ?>
+<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php'; ?>

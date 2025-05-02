@@ -5,8 +5,8 @@
 $title = 'View Profile';
 $subTitle = 'View Profile';
 ?>
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/admin/conf/function.php';
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php';
+require_once __DIR__ .  '/admin/conf/function.php';
 
 ?>
 
@@ -19,7 +19,7 @@ if (isset($_GET['id']) && $_GET['id'] != $_SESSION['accountId']) {
 ?>
 
     <script>
-        window.location.href = "/restaurant/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>";
+        window.location.href = "/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>";
     </script>
 
 <?php
@@ -34,7 +34,7 @@ if (isset($_POST['saveProfile'])) {
     if (updateProfileStaff($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=1";
+            window.location.href = "/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=1";
         </script>
 
     <?php
@@ -42,10 +42,10 @@ if (isset($_POST['saveProfile'])) {
     } else {
     ?>
         <script>
-            window.location.href = "/restaurant/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=0";
+            window.location.href = "/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=0";
         </script>
 
-        
+
 <?php
 
     }
@@ -57,14 +57,14 @@ if (isset($_POST['savePassword'])) {
     if (updatePassword($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=1";
+            window.location.href = "/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=1";
         </script>
 
     <?php
     } else {
     ?>
         <script>
-            window.location.href = "/restaurant/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=0";
+            window.location.href = "/admin/view-profile.php?id=<?= $_SESSION['accountId'] ?>&updated=0";
         </script>
 <?php
     }
@@ -81,7 +81,7 @@ if (isset($_POST['savePassword'])) {
             <img src="https://i.pinimg.com/736x/e9/83/d1/e983d1695c904346be3cf43449d108ef.jpg" alt="" class="w-100 object-fit-cover  h-30">
             <div class="pb-24 ms-16 mb-24 me-16  mt--100">
                 <div class="text-center border border-top-0 border-start-0 border-end-0">
-                    <img src="/restaurant/assets/images/users/<?= htmlspecialchars($userData['staff_image'] ?? 'default.jpg') ?>" alt="" class="border br-white border-width-2-px w-200-px h-200-px rounded-circle object-fit-cover">
+                    <img src="/assets/images/users/<?= htmlspecialchars($userData['staff_image'] ?? 'default.jpg') ?>" alt="" class="border br-white border-width-2-px w-200-px h-200-px rounded-circle object-fit-cover">
                     <h6 class="mb-0 mt-16"><?= htmlspecialchars($userData['staff_name'])  ?></h6>
                     <span class="text-secondary-light mb-16"><?= htmlspecialchars($userData['email']) ?></span>
                 </div>
@@ -143,7 +143,7 @@ if (isset($_POST['savePassword'])) {
                                     <div class="avatar-preview">
                                         <div id="imagePreview" style='
                                         background-image: url(
-                                        "/restaurant/assets/images/users/<?= htmlspecialchars($userData['staff_image'] ?? 'default.jpg') ?>"
+                                        "/assets/images/users/<?= htmlspecialchars($userData['staff_image'] ?? 'default.jpg') ?>"
                                         ); 
                                         background-size: cover;
                                         background-repeat: no-repeat;
@@ -334,4 +334,4 @@ if (newPassword === verifyPassword) {
                 </script>'; ?>
 
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php' ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php' ?>

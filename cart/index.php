@@ -1,6 +1,6 @@
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
+<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
 
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/function.php';
+require_once __DIR__ .  '/conf/function.php';
 
 $memberId = $_SESSION['memberId'];
 ?>
@@ -8,7 +8,7 @@ $memberId = $_SESSION['memberId'];
 <?php
 $heading = "
 	   <!-- SPECIFIC CSS -->
-    <link href='/restaurant/assets/css/shop.css' rel='stylesheet'>
+    <link href='/assets/css/shop.css' rel='stylesheet'>
     ";
 
 echo $heading;
@@ -84,7 +84,7 @@ echo $heading;
                             <tr>
                                 <td>
                                     <div class="thumb_cart">
-                                        <img src="/restaurant/admin/images/<?= $cart['item_image'] ?>" data-src="/restaurant/admin/images/<?= $cart['item_image'] ?>" class="lazy" alt="Image">
+                                        <img src="/admin/images/<?= $cart['item_image'] ?>" data-src="/admin/images/<?= $cart['item_image'] ?>" class="lazy" alt="Image">
                                     </div>
                                     <span class="item_cart"><?= $cart['quantity'] ?>x <?= $cart['item_name'] ?></span>
                                 </td>
@@ -148,9 +148,9 @@ echo $heading;
                     if ($quantity == 0) {
                         // jika quantity item itu 0 maka akan dihapus dari cart
                         if (deleteCart($memberId, $itemId) > 0) {
-                            echo "<script>window.location.href = '/restaurant/cart/?deleted=1'</script>";
+                            echo "<script>window.location.href = '/cart/?deleted=1'</script>";
                         } else {
-                            echo "<script>window.location.href = '/restaurant/cart/?deleted=0'</script>";
+                            echo "<script>window.location.href = '/cart/?deleted=0'</script>";
                         };
                     }
 
@@ -159,7 +159,7 @@ echo $heading;
 
                     // Jika quantity lebih dari 11 maka akan di arahkan ke halaman shop-single.php dengan parameter status = 5
                     if ($quantity > 11 || $quantity == 11) {
-                        echo "<script>window.location.href = '/restaurant/cart/?updated=-1'</script>";
+                        echo "<script>window.location.href = '/cart/?updated=-1'</script>";
                         exit;
                     }
 
@@ -168,7 +168,7 @@ echo $heading;
 
                     // jika gagal dan jika berhasil akan mengarahkan ke halaman cart lagi tetapi diberikan juga notifikiasi nya, gagal atau berhasil itu berdasarkan isi parameter 0 atau 1
                     if (mysqli_affected_rows($conn) > 0) {
-                        echo "<script>window.location.href = '/restaurant/cart/?updated=1'</script>";
+                        echo "<script>window.location.href = '/cart/?updated=1'</script>";
                     }
                 }
             }
@@ -193,7 +193,7 @@ echo $heading;
                 if (count($item) == 0) :
                 ?>
                     <tr>
-                        <td colspan='5' class='text-center'><a href="/restaurant/shop" class="btn_1">Let's go shopping!</a></td>
+                        <td colspan='5' class='text-center'><a href="/shop" class="btn_1">Let's go shopping!</a></td>
                     </tr>
                 <?php else: ?>
                     <div class="col-xl-4 col-lg-4 col-md-6">
@@ -277,7 +277,7 @@ echo $heading;
                                 <span>Total</span> <?= "Rp. $total"; ?>
                             </li>
                         </ul>
-                        <a href="/restaurant/checkout/" class="btn_1 full-width cart">Proceed to Checkout</a>
+                        <a href="/checkout/" class="btn_1 full-width cart">Proceed to Checkout</a>
                     </div>
                 <?php endif; ?>
             </div>
@@ -287,4 +287,4 @@ echo $heading;
 </main>
 
 <!-- footer -->
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php' ?>
+<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php' ?>

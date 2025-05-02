@@ -1,13 +1,13 @@
 <?php
-include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-top.php';
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/connection.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/conf/function.php';
+include_once __DIR__ . '/partials/layouts/layout-top.php';
+require_once __DIR__ .  '/conf/connection.php';
+require_once __DIR__ . '/conf/function.php';
 
 if (isset($_SESSION['isLogin']) == true) {
 ?>
-<script>
-window.location.href = "../index.php"
-</script>
+    <script>
+        window.location.href = "../index.php"
+    </script>
 <?php
 }
 
@@ -39,7 +39,7 @@ window.location.href = "../index.php"
 
                 <div class="form-group">
                     <label class="" style="color: white;">Don't have an account? <a
-                            href="/restaurant/register/">Register</a></label>
+                            href="/register/">Register</a></label>
                 </div>
 
 
@@ -67,4 +67,4 @@ window.location.href = "../index.php"
 <!-- /main -->
 
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/partials/layouts/layout-bottom.php' ?>
+<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php' ?>

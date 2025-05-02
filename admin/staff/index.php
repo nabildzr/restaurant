@@ -3,23 +3,23 @@
 $title = 'Staff';
 $subTitle = 'Restaurant';
 
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/function.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/conf/connection.php';
+require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/admin/conf/connection.php';
 
 ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutTop.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php'; ?>
 
 <?php
 if (isset($_POST['addStaff'])) {
     if (addStaff($_POST) > 0) {
 ?>
         <script>
-            window.location.href = "/restaurant/admin/staff/?alert=2";
+            window.location.href = "/admin/staff/?alert=2";
         </script>
     <?php    } else { ?>
         <script>
-            window.location.href = "/restaurant/admin/staff/?alert=12";
+            window.location.href = "/admin/staff/?alert=12";
         </script>
 <?php
     }
@@ -98,7 +98,7 @@ if (isset($_POST['addStaff'])) {
                         </td>
                         <td>
 
-                            <a href="edit-staff.php?staff_id=<?= $staff['staff_id']?>" class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center">
+                            <a href="edit-staff.php?staff_id=<?= $staff['staff_id'] ?>" class="w-32-px h-32-px bg-success-focus text-success-main rounded-circle d-inline-flex align-items-center justify-content-center">
                                 <iconify-icon icon="lucide:edit"></iconify-icon>
                             </a>
                             <a href="javascript:void(0)" onclick="deleteConfirm()" class="w-32-px h-32-px bg-danger-focus text-danger-main rounded-circle d-inline-flex align-items-center justify-content-center">
@@ -152,7 +152,7 @@ if (isset($_POST['addStaff'])) {
 //? Menggunakan nilai integer langsung tanpa mengonversi ke string
 ?>
 
-<?php 
+<?php
 $idAccount = getNextAvailableAccountID();
 $idStaff = getNextAvailableStaffID();
 ?>
@@ -184,7 +184,7 @@ $idStaff = getNextAvailableStaffID();
                             <label class="form-label">Staff Name</label>
                             <input type="text" name="staff_name" placeholder="Name" class="form-control" required>
                         </div>
-                        
+
                         <div class="col-12">
                             <label class="form-label">Staff Email</label>
                             <input type="text" name="staff_email" placeholder="nabildzikrika@gmail.com" class="form-control">
@@ -252,4 +252,4 @@ $idStaff = getNextAvailableStaffID();
                 
                 '; ?>
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>

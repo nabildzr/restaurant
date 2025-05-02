@@ -1,34 +1,34 @@
 <!-- jQuery library js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/jquery-3.7.1.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/jquery-3.7.1.min.js"></script>
 <!-- Bootstrap js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/bootstrap.bundle.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/bootstrap.bundle.min.js"></script>
 <!-- Apex Chart js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/apexcharts.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/apexcharts.min.js"></script>
 <!-- Data Table js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/dataTables.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/dataTables.min.js"></script>
 <!-- Iconify Font js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/iconify-icon.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/iconify-icon.min.js"></script>
 <!-- jQuery UI js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/jquery-ui.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/jquery-ui.min.js"></script>
 <!-- Vector Map js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/jquery-jvectormap-2.0.5.min.js"></script>
-<script src="/restaurant/assets_dashboard/assets/js/lib/jquery-jvectormap-world-mill-en.js"></script>
+<script src="/assets_dashboard/assets/js/lib/jquery-jvectormap-2.0.5.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/jquery-jvectormap-world-mill-en.js"></script>
 <!-- Popup js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/magnifc-popup.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/magnifc-popup.min.js"></script>
 <!-- Slick Slider js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/slick.min.js"></script>
+<script src="/assets_dashboard/assets/js/lib/slick.min.js"></script>
 <!-- prism js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/prism.js"></script>
+<script src="/assets_dashboard/assets/js/lib/prism.js"></script>
 <!-- file upload js -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/file-upload.js"></script>
+<script src="/assets_dashboard/assets/js/lib/file-upload.js"></script>
 <!-- audioplayer -->
-<script src="/restaurant/assets_dashboard/assets/js/lib/audioplayer.js"></script>
+<script src="/assets_dashboard/assets/js/lib/audioplayer.js"></script>
 
 <!-- sweetalertsssss -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.14.1/dist/sweetalert2.all.min.js"></script>
 
 <!-- main js -->
-<script src="/restaurant/assets_dashboard/assets/js/app.js"></script>
+<script src="/assets_dashboard/assets/js/app.js"></script>
 
 <script>
     // =============================== Upload Single Image js start here ================================================

@@ -22,9 +22,9 @@ Pembenaran: C:/laragon/www/ . '/admin-restaurant/partials/layouts/layoutTop.php'
 
 
 
-$_SERVER['DOCUMENT_ROOT']; -> akan mengembalikan path absolute ke direktori root dari server web,contoh: ada code  yang harus di include di berbagai file misalkan file code header.php yang dimana header.php akan digunakan di halaman membership, dll
+__DIR__; -> akan mengembalikan path absolute ke direktori root dari server web,contoh: ada code  yang harus di include di berbagai file misalkan file code header.php yang dimana header.php akan digunakan di halaman membership, dll
 
-contoh penggunaan -> '/templates/header.php' akan di gunakan di berbagai file misalkan di gunakan di file member.php dimana di paling atas type code ini '<?php include $_SERVER['DOCUMENT_ROOT'] . '/templates/header.php' ?>
+contoh penggunaan -> '/templates/header.php' akan di gunakan di berbagai file misalkan di gunakan di file member.php dimana di paling atas type code ini '<?php include __DIR__ . '/templates/header.php' ?>
 								^ YANG BERARTI DOCUMENT_ROOT ini adalah lanjutan address ke kiri yaitu 'C:/laragon/www/' dan jika di gabungkan maka 'C:/laragon/www/bukutamu/templates/header.php'
 
 sama fungsinya seperti menggunakan define('BASE_PATH' __DIR__) namun beda pada saat menggunakannya yang dimana jika menggunakan define maka kita harus memanggil define nya itu yang dimana define nya itu disimpan di config.php, contoh menggunakannya yaitu require_once '.../config.php' lalu kita pasang dimana kita akan memanggil nya contoh setelah kita memanggilnya = <?= include_once BASE_PATH . '/templates/header.php' ?>

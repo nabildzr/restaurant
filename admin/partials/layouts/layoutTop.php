@@ -1,11 +1,11 @@
 <?php session_start();
-require_once $_SERVER['DOCUMENT_ROOT'] .  '/restaurant/conf/connection.php';
+require_once __DIR__ .  '/conf/connection.php';
 
 
 if (!isset($_SESSION['isAdmin'])) {
 ?>
     <script>
-        window.location.href = "/restaurant/admin/sign-in.php";
+        window.location.href = "/admin/sign-in.php";
     </script>
 <?php
 }
@@ -29,15 +29,15 @@ $userData = mysqli_fetch_assoc($user);
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
-<?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/head.php' ?>
+<?php include_once __DIR__ . '/admin/partials/head.php' ?>
 
 <body>
 
-    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/sidebar.php' ?>
+    <?php include_once __DIR__ . '/admin/partials/sidebar.php' ?>
 
     <main class="dashboard-main">
-        <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/navbar.php' ?>
+        <?php include_once __DIR__ . '/admin/partials/navbar.php' ?>
 
         <div class="dashboard-main-body">
 
-            <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/restaurant/admin/partials/breadcrumb.php' ?>
+            <?php include_once __DIR__ . '/admin/partials/breadcrumb.php' ?>
