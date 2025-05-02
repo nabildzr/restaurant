@@ -1,7 +1,7 @@
-	<?php include_once __DIR__ . '/restaurant/partials/layouts/layout-top.php';
+	<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
 
 	// connection
-	require_once __DIR__ . '/restaurant/conf/connection.php';
+	require_once __DIR__ . '/conf/connection.php';
 	?>
 
 
