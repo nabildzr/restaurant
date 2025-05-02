@@ -1,7 +1,7 @@
 <?php
-include_once __DIR__ . '/partials/layouts/layout-top.php';
-require_once __DIR__ .  '/conf/connection.php';
-require_once __DIR__ . '/conf/function.php';
+include_once __DIR__ . '/../partials/layouts/layout-top.php';
+require_once __DIR__ .  '/../conf/connection.php';
+require_once __DIR__ . '/../conf/function.php';
 
 if (isset($_SESSION['isLogin']) == true) {
 ?>
@@ -67,4 +67,4 @@ if (isset($_SESSION['isLogin']) == true) {
 <!-- /main -->
 
 
-<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php' ?>
+<?php include_once __DIR__ . '/../partials/layouts/layout-bottom.php' ?>

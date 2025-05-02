@@ -1,6 +1,6 @@
-<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
-require_once __DIR__ .  '/conf/connection.php';
-require_once __DIR__ . '/conf/function.php';
+<?php include_once __DIR__ . '/../partials/layouts/layout-top.php';
+require_once __DIR__ .  '/../conf/connection.php';
+require_once __DIR__ . '/../conf/function.php';
 
 if (isset($_SESSION['isLogin']) == false) {
     echo '<script>window.location.href = "/index.php"</script>';

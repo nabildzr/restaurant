@@ -1,6 +1,6 @@
-<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
+<?php include_once __DIR__ . '/../partials/layouts/layout-top.php';
 
-require_once __DIR__ .  '/conf/function.php';
+require_once __DIR__ .  '/../conf/function.php';
 ?>
 
 
@@ -393,4 +393,4 @@ echo $script;
 
 
 
-<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php';
+<?php include_once __DIR__ . '/../partials/layouts/layout-bottom.php';

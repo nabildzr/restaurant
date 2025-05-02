@@ -1,6 +1,6 @@
-<?php include_once __DIR__ . '/partials/layouts/layout-top.php';
+<?php include_once __DIR__ . '/../partials/layouts/layout-top.php';
 
-require_once __DIR__ .  '/conf/connection.php';
+require_once __DIR__ .  '/../conf/connection.php';
 ?>
 
 <?php
@@ -271,4 +271,4 @@ echo $heading;
 
 </main>
 <!-- /main -->
-<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php'; ?>
+<?php include_once __DIR__ . '/../partials/layouts/layout-bottom.php'; ?>

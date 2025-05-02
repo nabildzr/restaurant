@@ -1,7 +1,7 @@
 <?php
 // availability.php
-require_once __DIR__ .  '/conf/connection.php';
-require_once __DIR__ . '/conf/function.php';
+require_once __DIR__ .  '/../conf/connection.php';
+require_once __DIR__ . '/../conf/function.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $selectedDate = $_GET["reservation_date"]; // Selected Date

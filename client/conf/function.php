@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/conf/connection.php';
+require_once __DIR__ . '/../conf/connection.php';
 
 function query($query)
 {

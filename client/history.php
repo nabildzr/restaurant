@@ -3,7 +3,7 @@ session_start();
 $title = 'Purchase History';
 $subTitle = 'Purchase History';
 ?>
-<?php include './partials/layouts/layoutTop.php';
+<?php include '../partials/layouts/layoutTop.php';
 
 
 

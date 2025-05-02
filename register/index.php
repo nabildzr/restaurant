@@ -1,20 +1,20 @@
 <?php
-include_once __DIR__ . '/partials/layouts/layout-top.php';
-require_once __DIR__ .  '/register/reg-check.php';
+include_once __DIR__ . '/../partials/layouts/layout-top.php';
+require_once __DIR__ .  '/../register/reg-check.php';
 
 if (isset($_SESSION['isLogin']) == true) {
 ?>
     <script>
-        window.location.href = "../index.php"
+        window.location.href = "../../index.php"
     </script>
 <?php
 }
 
 if (isset($_POST['signup'])) {
     if (register($_POST) > 0) {
-        echo "<script>window.location.href = '/login/?reg=1'</script>";
+        echo "<script>window.location.href = '../../login/?reg=1'</script>";
     } else {
-        echo "<script>window.location.href = '/register/?reg=-1'</script>";
+        echo "<script>window.location.href = '../../register/?reg=-1'</script>";
     }
 }
 
@@ -115,4 +115,4 @@ if (isset($_POST['signup'])) {
 // echo $script;
 ?>
 <!-- footer -->
-<?php include_once __DIR__ . '/partials/layouts/layout-bottom.php' ?>
+<?php include_once __DIR__ . '/../partials/layouts/layout-bottom.php' ?>
