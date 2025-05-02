@@ -1,7 +1,7 @@
-<?php include_once __DIR__ . '/partials/footer.php' ?>
+<?php include_once __DIR__ . '/../footer.php' ?>
 
 
-<?php include_once __DIR__ . '/partials/script.php' ?>
+<?php include_once __DIR__ . '/../script.php' ?>
 
 </body>
 
