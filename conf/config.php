@@ -6,9 +6,15 @@
 
   
 
-$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$url = parse_url(getenv("JAWSDB_URL"));
 
 $host = $url["host"];
 $user = $url["user"];
 $password = $url["pass"];
 $database = substr($url["path"], 1);
+
+$conn = new mysqli($host, $user, $password, $database);
+
+if ($conn->connect_error) {
+    die("Koneksi gagal: " . $conn->connect_error);
+}
