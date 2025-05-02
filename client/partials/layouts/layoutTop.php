@@ -1,6 +1,6 @@
 <?php
-include_once __DIR__ .  '/client/conf/function.php';
-require_once __DIR__ .  '/conf/connection.php';
+include_once __DIR__ .  '/../../conf/function.php';
+require_once __DIR__ .  '/../../conf/connection.php';
 if (!isset($_SESSION['isLogin'])) {
 ?>
     <script>
@@ -25,15 +25,15 @@ $userData = mysqli_fetch_assoc($user);
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
-<?php include_once __DIR__ . '/client/partials/head.php' ?>
+<?php include_once __DIR__ . '/../head.php' ?>
 
 <body>
 
-    <?php include_once __DIR__ . '/client/partials/sidebar.php' ?>
+    <?php include_once __DIR__ . '/../sidebar.php' ?>
 
     <main class="dashboard-main">
-        <?php include_once __DIR__ . '/client/partials/navbar.php' ?>
+        <?php include_once __DIR__ . '/../navbar.php' ?>
 
         <div class="dashboard-main-body">
 
-            <?php include_once __DIR__ . '/client/partials/breadcrumb.php' ?>
+            <?php include_once __DIR__ . '/../breadcrumb.php' ?>

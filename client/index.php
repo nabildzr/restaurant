@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once __DIR__ .  '/client/conf/function.php';
+include_once __DIR__ .  '/conf/function.php';
 
 // user
 

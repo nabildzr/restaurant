@@ -10,9 +10,13 @@ function query($query)
 {
     global $conn;
 
-    $rows =  [];
+    $rows = [];
 
     $result = mysqli_query($conn, $query);
+
+    if (!$result) {
+        die("Query failed: " . mysqli_error($conn) . " | Query: " . $query);
+    }
 
     while ($row = mysqli_fetch_assoc($result)) {
         $rows[] = $row;
