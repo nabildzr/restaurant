@@ -1,5 +1,5 @@
 <?php session_start();
-require_once __DIR__ .  '/conf/connection.php';
+require_once __DIR__ .  '/../../../conf/connection.php';
 
 
 if (!isset($_SESSION['isAdmin'])) {
@@ -29,15 +29,15 @@ $userData = mysqli_fetch_assoc($user);
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 
-<?php include_once __DIR__ . '/admin/partials/head.php' ?>
+<?php include_once __DIR__ . '/../head.php' ?>
 
 <body>
 
-    <?php include_once __DIR__ . '/admin/partials/sidebar.php' ?>
+    <?php include_once __DIR__ . '/../sidebar.php' ?>
 
     <main class="dashboard-main">
-        <?php include_once __DIR__ . '/admin/partials/navbar.php' ?>
+        <?php include_once __DIR__ . '/../navbar.php' ?>
 
         <div class="dashboard-main-body">
 
-            <?php include_once __DIR__ . '/admin/partials/breadcrumb.php' ?>
+            <?php include_once __DIR__ . '/../breadcrumb.php' ?>

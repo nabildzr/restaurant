@@ -5,7 +5,7 @@
 $title = 'Dashboard';
 $subTitle = 'eCommerce';
 ?>
-<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php';
+<?php include_once __DIR__ . '/partials/layouts/layoutTop.php';
 ?>
 
 
@@ -765,4 +765,4 @@ $subTitle = 'eCommerce';
 
 <?php $script = '<script src="/assets_dashboard/assets/js/homeThreeChart.js"></script>'; ?>
 
-<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php' ?>
+<?php include_once __DIR__ . '/partials/layouts/layoutBottom.php' ?>

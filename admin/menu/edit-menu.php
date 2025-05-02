@@ -3,8 +3,8 @@
 $title = 'Edit Menu';
 $subTitle = 'Restaurant';
 
-require_once __DIR__ . '/admin/conf/function.php';
-require_once __DIR__ . '/admin/conf/connection.php';
+require_once __DIR__ . '/../conf/function.php';
+require_once __DIR__ . '/../conf/connection.php';
 
 ?>
 
@@ -175,4 +175,4 @@ if (isset($_GET['item_id'])) {
                 
                 '; ?>
 
-<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php'; ?>
+<?php include_once __DIR__ . '/../partials/layouts/layoutBottom.php'; ?>

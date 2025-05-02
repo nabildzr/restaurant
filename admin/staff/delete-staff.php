@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/admin/conf/function.php';
+require_once __DIR__ . '/../conf/function.php';
 
 if(isset($_GET['account_id'])) {
     $idAccount = $_GET['account_id'];

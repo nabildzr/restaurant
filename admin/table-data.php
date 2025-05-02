@@ -3,7 +3,7 @@ $title = 'Basic Table';
 $subTitle = 'Basic Table';
 ?>
 
-<?php include_once __DIR__ . '/admin/partials/layouts/layoutTop.php' ?>
+<?php include_once __DIR__ . '/partials/layouts/layoutTop.php' ?>
 
 <div class="card basic-data-table">
     <div class="card-header">
@@ -658,7 +658,7 @@ $subTitle = 'Basic Table';
 <?php $script = '<script>
                     let table = new DataTable("#dataTable");
                 </script>'; ?>
-<?php include_once __DIR__ . '/admin/partials/layouts/layoutBottom.php' ?>
+<?php include_once __DIR__ . '/partials/layouts/layoutBottom.php' ?>
 
 </body>
 
